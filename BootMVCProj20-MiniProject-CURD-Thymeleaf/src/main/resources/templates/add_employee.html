@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color: blue; text-align: center;">Register Employee</h1>
+
+<form th:action="@{/employee/add_employee}" th:object="${emp}" method="POST">
+	<table border="0" bgcolor="cyan" align="center">
+		<tr>
+			<td>Employee Name : </td>
+			<td><input type="text" th:field="*{ename}"/> </td>
+		</tr>
+		<tr>
+			<td>Employee Designation : </td>
+			<td><input type="text" th:field="*{job}"/> </td>
+		</tr>
+		<tr>
+			<td>Employee Salary : </td>
+			<td><input type="text" th:field="*{sal}"/> </td>
+		</tr>
+		<tr>
+			<td>Employee Dept No : </td>
+			<td><input type="text" th:field="*{deptno}"/> </td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<button type="reset">
+					<img class="operation-btn" alt="rest image" th:src="@{/images/reset.png}">
+				</button> 
+				&nbsp;&nbsp;
+				<input class="operation-btn" type="image" th:src="@{/images/submit.png}">
+			</td>
+		</tr>
+	</table>
+</form>
+
+<style>
+.operation-btn{
+	width: 50px;
+	height: 50px;
+}
+</style>

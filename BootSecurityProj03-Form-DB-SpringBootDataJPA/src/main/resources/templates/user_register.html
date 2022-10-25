@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color: red; text-align: center;">User Registration page</h1>
+
+<form th:action="@{/user/register}" method="POST" th:object="${userInfo}">
+	<table border="0" bgcolor="cyan" align="center">
+		<tr>
+			<td>User Name:</td>
+			<td><input type="text" th:field="*{uname}"/></td>
+		<tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" th:field="*{pwd}"/></td>
+		<tr>
+		<tr>
+			<td>Email:</td>
+			<td><input type="email" th:field="*{email}"/></td>
+		<tr>
+		<tr>
+			<td>Roles:</td>
+			<td>
+				<input type="checkbox" th:field="*{roles}" value="CUSTOMER" checked="checked"/>CUSTOMER 
+				&nbsp; &nbsp; 
+				<input type="checkbox" th:field="*{roles}" value="MANAGER" />MANAGER
+			</td>
+		<tr>
+		<tr>
+			<td></td>
+			<td colspan="2">
+				<input type="reset"  value="Cancel"/> 
+				&nbsp; &nbsp; 
+				<input type="submit" value="Register"/>
+			</td>
+		<tr>
+	</table>
+</form>
+<br>
+<div style=" text-align: center;">
+	<a th:href="@{/bank/}">Home</a>
+</div>

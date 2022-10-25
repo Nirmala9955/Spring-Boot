@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color: blue; text-align: center;">Show Balance page</h1>
+<div style="text-align: center;">
+	<b>Balance : <span th:text="${balance}"/></b>
+</div>
+
+<div style="text-align: center;">
+	<a th:href="@{/bank/}">Home</a>&nbsp;&nbsp;
+	<a th:href="@{/bank/offers}">Show Offers</a>&nbsp; &nbsp;
+	<a th:href="@{/bank/loanApprove}">Approve Loan</a>&nbsp; &nbsp;
+	<a th:href="@{/logout}">Logout</a>
+</div>

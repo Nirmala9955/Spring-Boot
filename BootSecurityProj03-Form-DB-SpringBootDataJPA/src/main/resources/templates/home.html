@@ -1,0 +1,11 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color: red; text-align: center;">Welcome to XYZ Bank -- Home page</h1>
+
+<div style="text-align: center;">
+	<a th:href="@{/bank/balance}">Check Balance</a>&nbsp; &nbsp;
+	<a th:href="@{/bank/offers}">Show Offers</a>&nbsp;&nbsp;
+	<a th:href="@{/bank/loanApprove}">Approve Loan</a>
+	<br><br>
+	<a th:href="@{/user/register}">Register User</a>
+</div>

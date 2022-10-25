@@ -1,0 +1,30 @@
+#Using YML
+emp:
+   info:
+      #Simple Properties
+      id: 1001
+      #name: raja 
+      #Array
+      nickNames:
+         - Kana
+         - Muna
+         - Ravi
+      teamMembers:
+         - Ravi
+         - Ramesh
+         - Harish
+      phoneNumbers:
+         - 9999999999
+         - 8888888888
+         - 7777777777
+      #Map
+      idDetails:
+         aadharNo: 6987456334
+         panNo: JA643HY
+         voterId: 987465445
+      #HAS-A property 
+      compDetails:
+         title: HCL
+         location: Hyderbad
+         size: 2000
+         

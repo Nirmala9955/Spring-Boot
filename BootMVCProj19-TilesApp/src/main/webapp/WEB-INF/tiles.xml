@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE tiles-definitions PUBLIC  
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+      	 		"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      	 		
+<tiles-definitions>
+	<!-- Base Def -->
+	<definition name="baseDef" template="/WEB-INF/pages/layout.jsp">
+		<put-attribute name="title" type="string" value=""/>
+		<put-attribute name="header" value="/WEB-INF/pages/header.jsp"/>
+		<put-attribute name="menu" value="/WEB-INF/pages/menu.jsp"/>
+		<put-attribute name="body" value=""/>  
+		<put-attribute name="advertisement" value="/WEB-INF/pages/advertisement.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/pages/footer.jsp"/>
+	</definition>
+	
+	<!-- Home Def -->
+	<definition name="homePageDef" extends="baseDef">
+		<put-attribute name="title" type="string" value="Home Page"/>
+		<put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>  
+	</definition>
+	
+	<!-- Faculties Def -->
+	<definition name="facultiesPageDef" extends="baseDef">
+		<put-attribute name="title" type="string" value="Faculties Page"/>
+		<put-attribute name="body" value="/WEB-INF/pages/faculties.jsp"/>  
+	</definition>
+	
+	<!-- Courses Def -->
+	<definition name="coursesPageDef" extends="baseDef">
+		<put-attribute name="title" type="string" value="Courses Page"/>
+		<put-attribute name="body" value="/WEB-INF/pages/courses.jsp"/>  
+	</definition>
+	
+	<!-- Training Def -->
+	<definition name="trainingPageDef" extends="baseDef">
+		<put-attribute name="title" type="string" value="Training Page"/>
+		<put-attribute name="body" value="/WEB-INF/pages/training.jsp"/>  
+	</definition>
+
+</tiles-definitions>

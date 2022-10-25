@@ -1,0 +1,60 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:if="${!empsList.empty}">
+	<table border="1" bgcolor="cyan" align="center">
+		<tr bgcolor="pink">
+			<th>ENo</th>
+			<th>EName</th>
+			<th>Desg</th>
+			<th>Salary</th>
+			<th>Dept No</th>
+			<th>Operations</th>
+		</tr>
+		<tr th:each="emp:${empsList}">
+			<td><span th:text="${emp.empno}"/></td>
+			<td><span th:text="${emp.ename}"/></td>
+			<td><span th:text="${emp.job}"/></td>
+			<td><span th:text="${emp.sal}"/></td>
+			<td><span th:text="${emp.deptno}"/></td>
+			<td>
+				<a th:href="@{/employee/edit_employee(eno=${emp.empno})}"> 
+					<img class="user-operation" th:src="@{/images/edit-user.png}" />
+				</a> &nbsp;&nbsp; 
+				<a th:href="@{/employee/delete_employee(eno=${emp.empno})}" onclick="confirm('Do you want to delete?')"> 
+					<img class="user-operation" th:src="@{/images/delete-user.png}" />
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>	
+<div th:if="${empsList.empty}">		
+	<h1 style="color: red; text-align: center;">Records not Found</h1>
+</div>
+<br>
+<h1 class="blink_me" style="color: green; text-align: center;" th:text="${resultMsg}"/>
+<br>
+<div style="text-align: center;">
+	<a th:href="@{/employee/add_employee}"> 
+		<img class="user-operation" th:src="@{/images/add-user.png}" />
+	</a> &nbsp;&nbsp; 
+	<a th:href="@{/employee/}"> 
+		<img class="user-operation" th:src="@{/images/home.png}" />
+	</a>
+</div>
+
+<style>
+.user-operation {
+	height: 50px;
+	width: 50px;
+}
+
+.blink_me {
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker { 
+	50% {
+		opacity: 0;
+	}
+}
+</style>
